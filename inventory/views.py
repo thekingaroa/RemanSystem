@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.http import HttpResponse
+from django.db import IntegrityError
+from django.contrib.auth import login
 
 # Create your views here.
 
@@ -24,8 +25,9 @@ def SignUp(request):
                 user = User.objects.create_user(
                     username=request.POST['username'], password=request.POST['password1'])
                 user.save()
-                return HttpResponse('Usuario creado correctamente')
-            except:
+                login(request, user) #Guarda los datos de sesión a la cookie de la página
+                return redirect('inventory')
+            except IntegrityError:
                 return render(request, 'signUp.html', {
                     'form': UserCreationForm,
                     'error': 'El usuario ya existe'
@@ -34,3 +36,7 @@ def SignUp(request):
             'form': UserCreationForm,
             'error': 'Contraseñas no coinciden'
         })
+
+
+def inventory(request):
+    return render(request, 'inventory.html')
