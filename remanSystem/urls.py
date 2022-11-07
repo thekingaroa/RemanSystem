@@ -19,6 +19,6 @@ from inventory import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HelloWorld),
-    path('signup/', views.HelloWorld)
+    path('', views.home, name='home'),
+    path('signup/', views.SignUp, name='signup')
 ]
