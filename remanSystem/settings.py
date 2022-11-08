@@ -79,7 +79,7 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reman_database',
+        'NAME': 'db_remansystem_test',
         'USER': 'root',
         'PASSWORD': 'aroadev',
         'HOST': '127.0.0.1',

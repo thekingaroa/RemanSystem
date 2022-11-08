@@ -7,15 +7,17 @@ class ItemForm(ModelForm):
         fields = [
             'MARCA', 
             'MODELO',
-            'TIPO_EQUIPO',
-            'NO_SERIE',
-            'TIPO_DD',
-            'ESPACIO_DD',
+            'TIPO_DE_EQUIPO',
+            'NUMERO_DE_SERIE',
+            'TIPO_DE_DISCO',
+            'ESPACIO_EN_DISCO',
             'RAM',
-            'T_RAM',
-            'SYS_OP',
+            'TIPO_DE_RAM',
+            'SISTEMA_OPERATIVO',
             'MAC',
             'IP',
-            'TEAMVIEWER',
-            'ANYDESK',    
+            'TEAMVIEWER_ID',
+            'ANYDESK_ID', 
+            'DESCRIPCION'   
         ]
+  
