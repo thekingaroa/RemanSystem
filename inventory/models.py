@@ -19,3 +19,6 @@ class equipo(models.Model):
     CREATEDAT = models.DateTimeField(auto_now_add=True, blank=True)
     DESCRIPTION = models.TextField(blank=True)
     USER = models.ForeignKey(User, on_delete=models.CASCADE)
+    
+    def __str__(self) -> str:
+        return self.MARCA

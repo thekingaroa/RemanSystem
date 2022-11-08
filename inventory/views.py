@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import login, logout, authenticate
+from .forms import ItemForm
 
 # Create your views here.
 
@@ -37,7 +38,6 @@ def SignUp(request):
             'error': 'Contraseñas no coinciden'
         })
 
-
 def inventory(request):
     return render(request, 'inventory.html')
 
@@ -60,3 +60,14 @@ def signin(request):
         else:
             login(request, user)
             return redirect('inventory')
+
+def createItem(request):
+    
+    if request.method == 'GET':
+        return render(request, 'createItem.html', {
+            'form': ItemForm
+        })
+    else: 
+        return render(request, 'createItem.html', {
+            'form': ItemForm
+        })
