@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from .choices import RAZONES_SOCIALES, SYSOP, T_EQUIPO, TERMINALES, TIPO_DDISCO, TIPO_RAM, UBICACIONES
+from .choices import RAZONES_SOCIALES, SYSOP, T_EQUIPO, TERMINALES, TIPO_DDISCO, TIPO_RAM, UBICACIONES, C_RAM
 
 # Create your models here.
 class Unidades(models.Model):
@@ -18,7 +18,7 @@ class equipo(models.Model):
     NUMERO_DE_SERIE = models.CharField(max_length=40)
     TIPO_DE_DISCO = models.CharField(max_length=40, choices=TIPO_DDISCO)
     ESPACIO_EN_DISCO = models.BigIntegerField()
-    RAM = models.CharField(max_length=5, blank=True)
+    RAM = models.CharField(max_length=5, choices=C_RAM, blank=True)
     TIPO_DE_RAM = models.CharField(max_length=5, choices=TIPO_RAM)
     SISTEMA_OPERATIVO = models.CharField(max_length=30, choices=SYSOP)
     MAC = models.CharField(max_length=20, blank=True)

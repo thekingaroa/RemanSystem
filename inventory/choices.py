@@ -1,3 +1,11 @@
+C_RAM = [
+    ('4 GB', '4 GB'),
+    ('8 GB', '8 GB'),
+    ('16 GB', '12 GB'),
+    ('24 GB', '24 GB'),
+    ('32 GB', '32 GB')
+]
+
 T_EQUIPO = [
     ('LAPTOP', 'Laptop'),
     ('ESCRITORIO', 'Escritorio'),
@@ -33,14 +41,21 @@ RAZONES_SOCIALES = [
 
 TERMINALES = [
     ('T1', 'T1'),
-    ('T2', 'T2')
+    ('T2', 'T2'),
+    ('T3', 'T3'),
+    ('T4', 'T4')
 ]
 
 UBICACIONES = [
+    ('AICM', 'AICM'),
+    ('AIFA', 'AIFA'),
     ('ANTENAS', 'Plaza las Antenas'),
     ('DELTA', 'Parque Delta'),
     ('TEZONTLE', 'Tezontle'),
     ('LINDAVISTA', 'Parque Lindavista'),
-    ('AICM', 'AICM'),
-    ('AIFA', 'AIFA'),
+    ('PUERTO_VALLARTA', 'Puerto Vallarta'),
+    ('PLAYA_DEL_CARMEN', 'Playa del Carmen'),
+    ('GUADALAJARA', 'Guadalajara'),
+    ('MONTERREY', 'Monterrey'),
+    ('CANCUN', 'Cancún')
 ]
